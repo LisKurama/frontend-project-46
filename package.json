@@ -1,0 +1,28 @@
+{
+  "name": "@hexlet/code",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Вычислитель отличий - программа, предназначенная для определения разницы между двумя структурами данных.[![Actions Status](https://github.com/Walle1997/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Walle1997/frontend-project-46/actions)",
+  "main": "index.js",
+  "bin": {
+    "gendiff": "bin/diff.js"
+  },
+  "scripts": {
+    "start": "node gendiff.js",
+    "lint": "eslint .",
+    "test": "jest"
+  },
+  "author": "Vasfieva Alina",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "jest": "^29.7.0"
+  }
+}
