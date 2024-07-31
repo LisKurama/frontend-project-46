@@ -1,6 +1,10 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/LisKurama/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/LisKurama/frontend-project-46/actions)
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/15d2f14ef2663d03ef62/maintainability)](https://codeclimate.com/github/LisKurama/frontend-project-46/maintainability)
+
+[![Test Coverage](https://api.codeclimate.com/v1/badges/15d2f14ef2663d03ef62/test_coverage)](https://codeclimate.com/github/LisKurama/frontend-project-46/test_coverage)
+
 # Описание
 
 ## Консольное приложение для вычисления разницы в структурных данных двух файлов в форматах JSON и YAML.
