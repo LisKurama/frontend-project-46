@@ -1,26 +1,31 @@
-name: Test_gendiff
-
-on:
-  - push
-  - pull_request
-
+# file: .github/workflows/hello-world.yml
+name: check project
+# on – определяет события, которые запускают воркфлоу
+on: push
 jobs:
+  # build – произвольно выбранное имя задания
+  # их может быть больше одного
   build:
+    # операционная система для работы воркфлоу
     runs-on: ubuntu-latest
-
-    steps:
+    steps: # список шагов, которые надо выполнить
+      # экшен — выполняет какую-то задачу
+      # checkout — клонирует репозиторий
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 18.14.0
-      - run: npm  install
+      # run – произвольная bash-команда
+      # ls -la выведет содержимое текущего репозитория
+      - run: make install
       - run: make lint
-      - name: run tests
-        run: npm test
-      - uses: paambaati/codeclimate-action@v3.0.0
+      - run: npm run test
+      - run: npm test -- --coverage --coverageProvider=v8
+      - name: Test & publish code coverage
+        # Publish code coverage on Code Climate
+        # https://github.com/paambaati/codeclimate-action
+        uses: paambaati/codeclimate-action@v4.0.0
+        # Add Code Climate secret key
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
           coverageCommand: make test-coverage
           debug: true
-          
+
