@@ -8,8 +8,6 @@
     "gendiff": "bin/diff.js"
   },
   "scripts": {
-    "start": "node gendiff.js",
-    "lint": "eslint .",
     "test": "jest"
   },
   "author": "Vasfieva Alina",
